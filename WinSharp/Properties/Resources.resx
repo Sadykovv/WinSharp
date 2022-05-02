@@ -121,10 +121,22 @@
   <data name="png-transparent-search-icon-computer-icons-android-desktop-search-button-internet-share-icon-search-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-search-icon-computer-icons-android-desktop-search-button-internet-share-icon-search-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="update_w10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\update_w10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="92288457-magnifier-glass-icon-search-symbol-vector-illustration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92288457-magnifier-glass-icon-search-symbol-vector-illustration.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="92288457-magnifier-glass-icon-search-symbol-vector-illustration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92288457-magnifier-glass-icon-search-symbol-vector-illustration1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="update_w101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\update_w101.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="92288457-magnifier-glass-icon-search-symbol-vector-illustration2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92288457-magnifier-glass-icon-search-symbol-vector-illustration2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="update_w10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\update_w10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="92288457-magnifier-glass-icon-search-symbol-vector-illustration3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92288457-magnifier-glass-icon-search-symbol-vector-illustration3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

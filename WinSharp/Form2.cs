@@ -40,9 +40,15 @@ namespace WinSharp
             var phonenumber = textBox_phone2.Text;
             var timing = textBox_timing2.Text;
             var format = comboBox_format2.Text;
+            bool signLangInt = checkBox_signLangInt2.Checked;
+            bool colorCorr = checkBox_colorCorr2.Checked;
+            bool subtitles = checkBox_subtitles2.Checked;
+            bool music = checkBox_music2.Checked;
+            bool localization = checkBox_localization2.Checked;
+            var locationLayout = textBox_locationLayout2.Text;
 
-            var addQuery = $"insert into Table_1(FIO,Email,Interior,video4k,Airvideo,Ideaofvideo,PhoneNumber,Timing) values ('{fio}','{email}','{interior}'" +
-                $"'{video4k}','{airvideo}','{ideaofvideo}','{phonenumber}','{timing}')";
+            var addQuery = $"insert into Table_1(FIO,Email,Interior,video4k,Airvideo,Ideaofvideo,PhoneNumber,Timing,Format,signLangInt,colorCorr,subtitles,music,localization,locationLayout) values " +
+                $"('{fio}','{email}','{interior}','{video4k}','{airvideo}','{ideaofvideo}','{phonenumber}','{timing}','{format}','{signLangInt}','{colorCorr}','{subtitles}','{music}','{localization}','{locationLayout}')";
 
             var command = new SqlCommand(addQuery, database.GetConnection());
             command.ExecuteNonQuery();

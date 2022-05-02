@@ -63,6 +63,46 @@ namespace WinSharp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _92288457_magnifier_glass_icon_search_symbol_vector_illustration {
+            get {
+                object obj = ResourceManager.GetObject("92288457-magnifier-glass-icon-search-symbol-vector-illustration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _92288457_magnifier_glass_icon_search_symbol_vector_illustration1 {
+            get {
+                object obj = ResourceManager.GetObject("92288457-magnifier-glass-icon-search-symbol-vector-illustration1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _92288457_magnifier_glass_icon_search_symbol_vector_illustration2 {
+            get {
+                object obj = ResourceManager.GetObject("92288457-magnifier-glass-icon-search-symbol-vector-illustration2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _92288457_magnifier_glass_icon_search_symbol_vector_illustration3 {
+            get {
+                object obj = ResourceManager.GetObject("92288457-magnifier-glass-icon-search-symbol-vector-illustration3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_search_icon_computer_icons_android_desktop_search_button_internet_share_icon_search_button {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-search-icon-computer-icons-android-desktop-search-button-internet" +

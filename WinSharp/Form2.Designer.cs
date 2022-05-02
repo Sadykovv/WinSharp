@@ -50,6 +50,18 @@ namespace WinSharp
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button_save_form2 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox_locationLayout2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox_music2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_localization2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_subtitles2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_colorCorr2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_signLangInt2 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,6 +157,11 @@ namespace WinSharp
             // comboBox_format2
             // 
             this.comboBox_format2.FormattingEnabled = true;
+            this.comboBox_format2.Items.AddRange(new object[] {
+            "Праздничное",
+            "Корпоративное",
+            "Промо видео",
+            "Другое"});
             this.comboBox_format2.Location = new System.Drawing.Point(580, 370);
             this.comboBox_format2.Name = "comboBox_format2";
             this.comboBox_format2.Size = new System.Drawing.Size(222, 23);
@@ -219,7 +236,7 @@ namespace WinSharp
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(1, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(908, 100);
+            this.panel1.Size = new System.Drawing.Size(1360, 100);
             this.panel1.TabIndex = 42;
             // 
             // label3
@@ -234,19 +251,144 @@ namespace WinSharp
             // 
             // button_save_form2
             // 
-            this.button_save_form2.Location = new System.Drawing.Point(398, 410);
+            this.button_save_form2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_save_form2.Location = new System.Drawing.Point(611, 494);
             this.button_save_form2.Name = "button_save_form2";
-            this.button_save_form2.Size = new System.Drawing.Size(75, 23);
+            this.button_save_form2.Size = new System.Drawing.Size(104, 42);
             this.button_save_form2.TabIndex = 43;
             this.button_save_form2.Text = "Сохранить";
             this.button_save_form2.UseVisualStyleBackColor = true;
             this.button_save_form2.Click += new System.EventHandler(this.button_save_form2_Click);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Viner Hand ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(1077, 370);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 19);
+            this.label16.TabIndex = 55;
+            this.label16.Text = "Макет";
+            // 
+            // textBox_locationLayout2
+            // 
+            this.textBox_locationLayout2.Location = new System.Drawing.Point(1147, 366);
+            this.textBox_locationLayout2.Name = "textBox_locationLayout2";
+            this.textBox_locationLayout2.Size = new System.Drawing.Size(206, 23);
+            this.textBox_locationLayout2.TabIndex = 54;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Viner Hand ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(1024, 285);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(105, 19);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "Дублирование";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Viner Hand ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(1070, 197);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 19);
+            this.label14.TabIndex = 52;
+            this.label14.Text = "Музыка";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Viner Hand ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(859, 373);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 19);
+            this.label13.TabIndex = 51;
+            this.label13.Text = "Субтитры";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Viner Hand ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(859, 285);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 19);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Цветокор";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Viner Hand ITC", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(829, 194);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 19);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "Сурдоперевод";
+            // 
+            // checkBox_music2
+            // 
+            this.checkBox_music2.AutoSize = true;
+            this.checkBox_music2.Location = new System.Drawing.Point(1147, 202);
+            this.checkBox_music2.Name = "checkBox_music2";
+            this.checkBox_music2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_music2.TabIndex = 48;
+            this.checkBox_music2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_localization2
+            // 
+            this.checkBox_localization2.AutoSize = true;
+            this.checkBox_localization2.Location = new System.Drawing.Point(1147, 289);
+            this.checkBox_localization2.Name = "checkBox_localization2";
+            this.checkBox_localization2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_localization2.TabIndex = 47;
+            this.checkBox_localization2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_subtitles2
+            // 
+            this.checkBox_subtitles2.AutoSize = true;
+            this.checkBox_subtitles2.Location = new System.Drawing.Point(953, 375);
+            this.checkBox_subtitles2.Name = "checkBox_subtitles2";
+            this.checkBox_subtitles2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_subtitles2.TabIndex = 46;
+            this.checkBox_subtitles2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_colorCorr2
+            // 
+            this.checkBox_colorCorr2.AutoSize = true;
+            this.checkBox_colorCorr2.Location = new System.Drawing.Point(953, 290);
+            this.checkBox_colorCorr2.Name = "checkBox_colorCorr2";
+            this.checkBox_colorCorr2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_colorCorr2.TabIndex = 45;
+            this.checkBox_colorCorr2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_signLangInt2
+            // 
+            this.checkBox_signLangInt2.AutoSize = true;
+            this.checkBox_signLangInt2.Location = new System.Drawing.Point(953, 198);
+            this.checkBox_signLangInt2.Name = "checkBox_signLangInt2";
+            this.checkBox_signLangInt2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_signLangInt2.TabIndex = 44;
+            this.checkBox_signLangInt2.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 465);
+            this.ClientSize = new System.Drawing.Size(1361, 622);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.textBox_locationLayout2);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.checkBox_music2);
+            this.Controls.Add(this.checkBox_localization2);
+            this.Controls.Add(this.checkBox_subtitles2);
+            this.Controls.Add(this.checkBox_colorCorr2);
+            this.Controls.Add(this.checkBox_signLangInt2);
             this.Controls.Add(this.button_save_form2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox_fio2);
@@ -299,5 +441,17 @@ namespace WinSharp
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_save_form2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox_locationLayout2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox_music2;
+        private System.Windows.Forms.CheckBox checkBox_localization2;
+        private System.Windows.Forms.CheckBox checkBox_subtitles2;
+        private System.Windows.Forms.CheckBox checkBox_colorCorr2;
+        private System.Windows.Forms.CheckBox checkBox_signLangInt2;
     }
 }
