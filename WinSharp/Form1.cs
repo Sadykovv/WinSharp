@@ -48,13 +48,17 @@ namespace WinSharp
             dataGridView1.Columns.Add("music", "Муз.Соп");
             dataGridView1.Columns.Add("localization", "Дубляж");
             dataGridView1.Columns.Add("LocationLayout", "Макет локации");
-            dataGridView1.Columns.Add("IsNew", String.Empty);
+            dataGridView1.Columns.Add("Status", "Статус заказа");
+            dataGridView1.Columns.Add("IsNew","вввв");
+ 
         }
         private void ReadSingleRow(DataGridView dgw,SD.IDataRecord record)
         {
+
             dgw.Rows.Add(record.GetInt32(0),record.GetString(1),record.GetString(2),record.GetBoolean(3),record.GetBoolean(4),
             record.GetBoolean(5),record.GetString(6),record.GetString(7),record.GetString(8),record.GetString(9),
-            record.GetBoolean(10),record.GetBoolean(11),record.GetBoolean(12),record.GetBoolean(13),record.GetBoolean(14),record.GetString(15),RowState.New);
+            record.GetBoolean(10),record.GetBoolean(11),record.GetBoolean(12),record.GetBoolean(13),record.GetBoolean(14),record.GetString(15), record.GetString(16),RowState.New);
+          
         }
 
 
@@ -99,7 +103,7 @@ namespace WinSharp
         {
             dgw.Rows.Clear();
 
-            string searchString = $"select *from Table_1 where concat (ID,FIO,Email,Interior,video4k,Airvideo,Ideaofvideo,PhoneNumber,Timing,Format,signLangInt,colorCorr,subtitles,music,localization,locationLayout)like '%"+textBox3_search.Text+"%'";
+            string searchString = $"select *from Table_1 where concat (ID,FIO,Email,Interior,video4k,Airvideo,Ideaofvideo,PhoneNumber,Timing,Format,signLangInt,colorCorr,subtitles,music,localization,locationLayout,Status)like '%"+textBox3_search.Text+"%'";
 
             SqlCommand com = new SqlCommand(searchString, dataBase.GetConnection());
             dataBase.openConnection();
@@ -119,11 +123,11 @@ namespace WinSharp
 
             if (dataGridView1.Rows[index].Cells[0].Value.ToString() == string.Empty)
             {
-                dataGridView1.Rows[index].Cells[16].Value = RowState.Deleted;
+                dataGridView1.Rows[index].Cells[17].Value = RowState.Deleted;
                 return;
             }
 
-            dataGridView1.Rows[index].Cells[16].Value = RowState.Deleted;
+            dataGridView1.Rows[index].Cells[17].Value = RowState.Deleted;
 
         }
 
@@ -134,7 +138,7 @@ namespace WinSharp
 
             for (int index = 0; index < dataGridView1.Rows.Count; index++)
             {
-                var rowState = (RowState)dataGridView1.Rows[index].Cells[16].Value;
+                var rowState = (RowState)dataGridView1.Rows[index].Cells[17].Value;
 
                 if (rowState == RowState.Existed)
                     continue;
@@ -164,10 +168,11 @@ namespace WinSharp
                     var subtitles = (bool)dataGridView1.Rows[index].Cells[12].Value;
                     var music = (bool)dataGridView1.Rows[index].Cells[13].Value;
                     var localization = (bool)dataGridView1.Rows[index].Cells[14].Value;
-                    var lozationLayout = dataGridView1.Rows[index].Cells[15].Value;
+                    var lozationLayout = dataGridView1.Rows[index].Cells[15].Value.ToString();
+                    var Status = dataGridView1.Rows[index].Cells[16].Value.ToString();
 
                     var changeQuery = $"update Table_1 set FIO='{fio}',Email='{email}',Interior='{interior}',video4k='{video4k}',Airvideo='{airvideo}',Ideaofvideo='{ideaofvideo}',PhoneNumber='{phonenumber}'," +
-                        $"Timing='{timing}',Format='{format}',signLangInt='{signLangInt}',colorCorr='{colorCorr}',subtitles='{subtitles}',music='{music}',localization='{localization}',locationLayout='{lozationLayout}' where ID ='{id}'";
+                        $"Timing='{timing}',Format='{format}',signLangInt='{signLangInt}',colorCorr='{colorCorr}',subtitles='{subtitles}',music='{music}',localization='{localization}',locationLayout='{lozationLayout}',Status='{Status}' where ID ='{id}'";
                     var command = new SqlCommand(changeQuery, dataBase.GetConnection());
                     command.ExecuteNonQuery();
                 }
@@ -211,6 +216,7 @@ namespace WinSharp
                 checkBox_music.Checked = (bool)row.Cells[13].Value;
                 checkBox_localization.Checked = (bool)row.Cells[14].Value;
                 textBox_locationLayout.Text = row.Cells[15].Value.ToString();
+                comboBox_Status.Text = row.Cells[16].Value.ToString();
             }
         }
 
@@ -265,11 +271,13 @@ namespace WinSharp
             bool music = checkBox_music.Checked;
             bool localization = checkBox_localization.Checked;
             var locationLayout = textBox_locationLayout.Text;
+            var Status = comboBox_Status.Text;
 
 
-            
-            dataGridView1.Rows[selectedrowindex].SetValues(id,fio, email, interior, video4k, airvideo, ideaofvideo, phonenumber, timing, format,signLangInt,colorCorr,subtitles,music,localization,locationLayout);
-            dataGridView1.Rows[selectedrowindex].Cells[16].Value = RowState.Modified;
+
+
+            dataGridView1.Rows[selectedrowindex].SetValues(id,fio, email, interior, video4k, airvideo, ideaofvideo, phonenumber, timing, format,signLangInt,colorCorr,subtitles,music,localization,locationLayout,Status);
+            dataGridView1.Rows[selectedrowindex].Cells[17].Value = RowState.Modified;
             
         }
 
